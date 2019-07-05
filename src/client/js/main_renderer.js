@@ -165,6 +165,7 @@ function init() {
     /* Selection button */
     function make_slection() {
         var brush = document.getElementById("brush");
+        brush.style.dsiplay: block;
         document.addEventListener("mousemove", getMouse); 
 
         brush.style.position = "absolute"; //css    

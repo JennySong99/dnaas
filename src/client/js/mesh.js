@@ -53,7 +53,8 @@ MESH.addModelFile = function(file, trans=null, rot=null) {
                     object.applyQuaternion(new THREE.Quaternion(rot[1], rot[2], rot[3], rot[0]));
                 }
                 GLOBAL.camera.reset();
-                $('#wireframe-switch, #autoscale-switch', '#autoscale-switch') // only enable wireframe when mesh is loaded.
+                $('#wireframe-switch, #autoscale-switch') // only enable wireframe when mesh is loaded.
+                // '#selection'
                     .attr('disabled', false);
                 GRIPPER.update(); // Update gripper so that it doesn't collide
                 resolve();
@@ -84,7 +85,8 @@ MESH.set_autoscale = function(value){
 }
 
 MESH.clear = function() {
-    $('#wireframe-switch, #autoscale-switch') // disable mesh and stable pose when no mesh is loaded
+    $('#wireframe-switch, #autoscale-switch') 
+    // '#selection'// disable mesh and stable pose when no mesh is loaded
         .attr('disabled', true);
     GLOBAL.world.remove(MESH.mesh_main);
 }

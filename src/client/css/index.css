@@ -1,3 +1,6 @@
+#brush {
+	display: none;
+}
 #brush {transition: transform .1s}
 .left {
         -moz-transform: scaleX(-1);
