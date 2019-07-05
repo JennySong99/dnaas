@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-size: 1.3em;
+  color: #333;
+  background: #333;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+.sidebar {
+  flex: 0 0 220px;
+}
+
+.content {
+  flex: 1 1 200px;
+  padding: 30px;
+  background: #F7F7F7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transition: transform 0.3s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:before {
+  content: "\f0c9";
+  font: 42px fontawesome;
+}
+
+/* Demo Navigation */
+
+.title {
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: #eee;
+  border-bottom: 1px solid #222;
+  background: white;
+}
+
+.title img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav li a {
+  display: block;
+  position: relaitve;
+  padding: 20px 0 20px 50px;
+  font-size: 14px;
+  color: #eee;
+  border-bottom: 1px solid #222;
+}
+
+.nav li a:focus {
+  background-color: #333;
+}
+
+.nav li a:before {
+  font: 14px fontawesome;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+.nav li:nth-child(1) a:before {
+  content: "\f015";
+}
+.nav li:nth-child(2) a:before {
+  content: "\f05a";
+}
+.nav li:nth-child(3) a:before {
+  content: "\f059";
+}
+.nav li:nth-child(4) a:before {
+  content: "\f086";
+}
+.nav li:nth-child(5) a:before {
+  content: "\f19d";
+}
+
+.nav li a:hover {
+  background: #444;
+}
+
+.nav li a.active {
+  box-shadow: inset 5px 0 0 #d3ab2c, inset 6px 0 0 #222;
+  background: #444;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #494949;
+}
+
+.subtitle-container {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 50%;
+  margin-bottom: 30px;
+}
+
+.faq .list-group-item {
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+
+.faq h1 {
+  margin-bottom: 25px;
+}
+
+.faq .list-group-item-text .list-group-flush .list-group-item {
+  border: 0px;
+  margin: 0px;
+  padding: 5px 5px 0px 5px;
+}
+
+.faq .list-group-item-text ul {
+  margin: 5px;
+}
+
+
+.alert-fixed {
+  position: fixed;
+  margin-right: 10px;
+  z-index: 9999;
+  border-radius: 0px;
+  display: block;
+}
+
+
+.alert-dismissable .close {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  opacity: 0.9;
+}
+
+p {
+  font-size: 15px;
+}
+
+.alert {
+  max-width: 50%;
+}
+
+.down .ims {
+  display: flex;
+  justify-content: center;
+}
+
+.list-group-item {
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+#authors-header {
+border-left: solid;
+background-color: #eae8e8;
+padding-top: 10px;
+padding-bottom: 10px;
+border-width: 4px;
+padding-left: 10px;
+}

@@ -1,0 +1,240 @@
+.progress {
+	border-radius: 4px;
+	background: #FFF;
+    border: 1px solid #AAA;
+    margin-bottom: 0;
+}
+
+.progress-container {
+    flex: 1 1 30%;
+    flex-direction: column;
+    text-align: center;
+}
+
+#progress-bar {
+    width: 0px;
+    transition: 0.2s;
+    height: 100%;
+}
+
+.controls {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+#sidebar {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: wrap row;
+    margin-bottom: 5px;
+		align-items: center;
+}
+
+#sidebar input {
+    margin: 2px;
+}
+
+/* Grasp slider */
+.slider-display-field {
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+ #metric-limits {
+    width: 75px;
+		text-align:center;
+ }
+
+ .metric-slider {
+    flex: 1 1 auto;
+    text-align: center;
+		font-weight: 500;
+}
+
+ .metric-slider #rendered-count {
+     text-align: center;
+		 font-weight: 500;
+ }
+
+ #slider-range {
+    background: linear-gradient(to right, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 50%, rgba(0,255,0,1) 100%);
+ }
+
+ #slider-range .ui-slider-handle:first-of-type {
+  background: red;
+ }
+ #slider-range .ui-slider-handle:last-of-type {
+  background: green;
+ }
+
+ #slider-range .ui-slider-range {
+  background: bottom;
+ }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.alert {
+    align-self: center;
+}
+
+#upload-confirm {
+	padding: 10px 70px;
+}
+
+#find-upload {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.upload-confirm-container {
+    text-align: center;
+    margin: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.graphics-container {
+    display: flex;
+		flex-direction: row; /* changed here */
+		justify-content: space-around;
+		margin-top: 10px;
+}
+
+#canvas-container {
+    flex: 1 0.3 auto;
+		overflow: auto;
+		position: relative;
+		background-color: white;
+		border-style: solid;
+		border-right: hidden;
+		border-width: 1px;
+		border-color: #6e849a;
+}
+
+#canvas {
+    cursor: pointer;
+		align-self: center;
+}
+
+.boxes {
+		flex: 0 1 auto;
+		padding: 0px 20px 20px 20px;
+		overflow: auto;
+		background-color: #d6d6d6;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #6e849a;
+}
+
+label {
+	font-weight: 500;
+}
+
+.boxes .btn {
+  width: 100%;
+}
+
+.boxes .stable-pose-nav-button {
+	width: 10%;
+}
+
+.download {
+	text-align: center;
+}
+
+.download button {
+	margin: 2px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+		font-weight: bold;
+}
+
+#grasp-subtitle {
+	margin-top: 5px;
+}
+
+.subtitle h5 {
+		font-weight: bold;
+}
+
+#stable-poses {
+    flex: 0 1 100px;
+    margin-left: 0px;
+}
+
+#stable-pose-selector {
+    display: flex;
+		justify-content: center;
+}
+
+.option-divider {
+	padding-bottom: 10px;
+	border-bottom: solid;
+	text-align: justify;
+	border-color: #6e849a;
+	border-width: 1px;
+}
+
+
+.buttons {
+		/* margin-right: 10px; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+.btn-group-xs>.btn, .btn-xs {
+	margin: 2px;
+	/* margin-left: 5px; */
+}
+
+.btn-md {
+	margin-left: 20px;
+}
+
+.mesh-select-container {
+    flex: 0 1 auto;
+}
+
+.stable-pose-id {
+    flex: 0 1 auto;
+    background: #fff;
+		text-align: center;
+    width: 40px;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+.ui-selectmenu-text {
+	padding: 4px 0px;
+	display: block;
+	font-size: 14px;
+	margin-right: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: fit-content;
+}

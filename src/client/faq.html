@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/AutolabLogoCompact.png" />
+    <title>Dex-Net as a Service (DNaaS)</title>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108286551-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-108286551-1');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/flexbox-template.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='sidebar'>
+            <div class='title'>
+                <a href="http://autolab.berkeley.edu" target="_blank">
+                    <img src="assets/AUTOLab-Logo-site.png" alt="UC Berkeley Autolab" class="autolab-logo">
+                </a>
+            </div>
+            <ul class='nav'>
+                <li>
+                    <a href="./">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="faq.html" class="active">FAQ</a>
+                </li>
+                <li>
+                    <a href="https://goo.gl/forms/R8t24eGFNUmEYpjD3" target="_blank">Submit Feedback</a>
+                </li>
+                <li>
+                    <a href="http://goldberg.berkeley.edu/pubs/CASE2018-pusong-bill-dnaas-final.pdf" download target="_blank">Download Paper</a>
+                </li>
+            </ul>
+        </div>
+        <div class='content faq'>
+            <div id="errorMessage" style="display: none" class="alert alert-warning alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Whoops, looks like we ran into an issue. Please try again or, if the issue persists,
+                <a href="https://goo.gl/forms/R8t24eGFNUmEYpjD3" target="_blank">report a bug</a> and we will take a closer look.
+            </div>
+            <h1>Frequently Asked Questions</h1>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h4 class="list-group-item-heading">What is Dex-Net as a Service?</h4>
+                    <p class="list-group-item-text">
+                        Dex-Net as a Service (DNaaS) is a cloud-based grasp planning
+                        system for parallel-jaw grippers that provides a graphical user
+                        interface and API access to Dex-Net 1.0, a robust grasp planning
+                        system based on wrench mechanics and stochastic sampling.
+                        DNaaS allows anyone online to compute parallel-jaw grasps
+                        on triangular meshes and visualize the results.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h4 class="list-group-item-heading">Where can I read the original Dex-Net as a Service (DNaaS) research paper?</h4>
+                    <p class="list-group-item-text">
+                        The original DNaaS paper will appear at
+                        <a href="http://case2018.org/" target="_blank">CASE 2018</a>
+                        and is available
+                        <a href="http://goldberg.berkeley.edu/pubs/CASE2018-pusong-bill-dnaas-final.pdf" download target="_blank">online</a> as a PDF.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h4 class="list-group-item-heading" id="thingiverse-how-to">How can I find an .obj file to upload to DNaaS?</h4>
+                    <div class="list-group-item-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. Find an object you like on
+                                <a href="https://www.thingiverse.com/newest" target="_blank">Thingiverse</a> and click it to
+                                view more details.</li>
+                                <li class="list-group-item">2. Download All Files using the blue box in the upper right on the Thingiverse website.</li>
+                                    <li class="list-group-item">4. Navigate to the downloaded folder on your computer and unzip or extract the entire .zip file.</li>
+                                    <li class="list-group-item">
+                                        5. Inside the unzipped folder, go into Files and find the .stl file for the object on your computer.
+                                    </li>
+                                    <li class="list-group-item">3. Use the
+                                        <a href="https://www.meshconvert.com/" target="_blank">Free Convert Tool</a> to convert the .stl file to an .obj file. Be sure to select
+                                        the correct Output Format (WaveFront Object (.obj)), so DNaaS can understand your
+                                        mesh.
+                                    </li>
+                                    <li class="list-group-item">4. When the conversion is done, click the .obj file link on the Converter
+                                        webpage to download it to your computer
+                                        for use by Dex-Net as a Service (DNaaS).
+                                    </li>
+                                    <li class="list-group-item">5. Return to the <a href="index.html">home</a> page and use the Upload Object button to
+                                    select your object for processing by DNaaS.</li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">What scale does DNaaS expect uploaded .obj meshes to be in?</h4>
+                        <p class="list-group-item-text">DNaaS interprets mesh object units to be specified in meters.
+                            The browser client will rescale any mesh you upload to fit within the given gripper by default.
+                            If you wish to disable this feature and
+                            use the scale given in your original .obj, uncheck the "Autoscale mesh" box on the top right
+                            of 3D scene. This may lead to no grasps being found due to a scale mismatch between the gripper
+                            target object.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                            <h4 class="list-group-item-heading">Why does the gripper sometimes not appear in the 3D window?</h4>
+                            <p class="list-group-item-text">The gripper does not appear sometimes in the 3D window due to a mismatch
+                                between the scale of the gripper object mesh and the current target object mesh. Drastically different
+                                scales prevent us from rendering both meshes (the gripper and target object) visibly in the scene.
+                                For example, uploading a cm-scaled mesh may result in the gripper (specified in meter-scale) appearing
+                                as a very small object in the scene.
+                            </p>
+                        </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Where can I read more about the DNaaS HTTP API?</h4>
+                        <p class="list-group-item-text">The DNaaS API documentation is hosted
+                            <a href="https://gist.github.com/bderose/61d70384d159af3715865b35b75e96e0"
+                                target="_blank">online</a>
+                            for users interested in accessing the service directly via HTTP.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Are there any examples of using the DNaaS HTTP API programmatically?</h4>
+                        <p class="list-group-item-text">Examples of how to access the DNaaS API via
+                            <a href="https://gist.github.com/bderose/0c1c2cad2d4291b16a9a24d4b271da1f" target="_blank">Python</a> and
+                            <a href="https://gist.github.com/bderose/bc33ab34440b56f67a03aa0ea1030355" target="_blank">C#</a>
+                            are available online.
+                        </p>
+                    </li>
+            </ul>
+        </div>
+</body>
+
+</html>
