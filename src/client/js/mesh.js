@@ -53,7 +53,7 @@ MESH.addModelFile = function(file, trans=null, rot=null) {
                     object.applyQuaternion(new THREE.Quaternion(rot[1], rot[2], rot[3], rot[0]));
                 }
                 GLOBAL.camera.reset();
-                $('#wireframe-switch, #autoscale-switch') // only enable wireframe when mesh is loaded.
+                $('#wireframe-switch, #autoscale-switch', '#autoscale-switch') // only enable wireframe when mesh is loaded.
                     .attr('disabled', false);
                 GRIPPER.update(); // Update gripper so that it doesn't collide
                 resolve();
